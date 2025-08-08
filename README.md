@@ -34,23 +34,27 @@ A simple RESTful API for managing books, built with FastAPI and Pydantic.
 1. Clone the repository:  
    ```bash
    git clone https://github.com/api-sage/book_manager.git
-   cd book_manager/src
+   cd book_manager
    
 2. Create and activate a virtual environment:
    ```bash
     python -m venv venv
-    source venv/bin/activate  # Linux/macOS
-    venv\Scripts\activate     # Windows
+    source venv/bin/  # Linux/macOS
+    venv\Scripts\ # Windows
+    activate     
 
 4. Install dependencies:
    ```bash
-      pip install -r requirements.txt
+   cd src
+   pip install -r requirements.txt
 
 6. Running the Application
      ```bash
+     cd ..
      uvicorn main:app --reload
 
-#### The API will be available at: http://127.0.0.1:8000
+#### The API will be available at: http://127.0.0.1:8000/docs
+
 
 | Method | Endpoint                | Description              |
 | ------ | ----------------------- | ------------------------ |
@@ -66,5 +70,5 @@ A simple RESTful API for managing books, built with FastAPI and Pydantic.
 * The id for new books is auto-incremented based on the last inserted book.
 * Responses are standardized using the BasicResponse model.
 
-License
+### License
 This project is open source and available under the MIT License.
