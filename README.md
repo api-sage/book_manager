@@ -18,16 +18,16 @@ A simple RESTful API for managing books, built with FastAPI and Pydantic.
 - **Python 3.10+**
 
 ## Project Structure
-
-src/
-├── commons/ # Common models (e.g. Book class)
-├── models/
-│ ├── requests/ # Request schemas
-│ ├── book_response.py/ # Book response schema
-│ └── response.py # BasicResponse model
-├── business_logic/ # Core business logic
-└── main.py # FastAPI app entry point
-
+   ```
+      src/
+      ├── commons/ # Common models (e.g. Book class)
+      ├── models/
+      │ ├── requests/ # Request schemas
+      │ ├── book_response.py/ # Book response schema
+      │ └── response.py # BasicResponse model
+      ├── business_logic/ # Core business logic
+      └── main.py # FastAPI app entry point
+   ```
 
 ## Installation
 
