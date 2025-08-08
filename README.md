@@ -37,14 +37,17 @@ src/
    cd book_manager/src
    
 2. Create and activate a virtual environment:
+   ```bash
     python -m venv venv
     source venv/bin/activate  # Linux/macOS
     venv\Scripts\activate     # Windows
 
-3. Install dependencies:
-     pip install -r requirements.txt
+4. Install dependencies:
+   ```bash
+      pip install -r requirements.txt
 
-4. Running the Application
+6. Running the Application
+     ```bash
      uvicorn main:app --reload
 
 #### The API will be available at: http://127.0.0.1:8000
