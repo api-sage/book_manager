@@ -1,6 +1,6 @@
 from fastapi import *
 from src.models.responses.book_response import BookResponse
-from src.models.requests.bookRequest import *
+from src.models.requests.book_request import *
 from src.models.responses.response import *
 from src.business_logic.book_service import *
 
@@ -40,7 +40,7 @@ async def get_book_by_rating(book_rating: int = Query(gt=0, lt=6)) -> BasicRespo
             books_to_return.append(book)
     if len(books_to_return) < 1:
         raise HTTPException(status_code=404, detail="No book was found")
-    return BasicResponse(status=True, message="successful", data=BookResponse(**books_to_return.__dict__))
+    return BasicResponse(status=True, message="successful", data=[BookResponse(**book.__dict__) for book in books_to_return])
 
 #Updates target book as requested
 @app.put("/update_a_book/{book_id}", status_code=status.HTTP_200_OK)
