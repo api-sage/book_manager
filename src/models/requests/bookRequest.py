@@ -1,5 +1,4 @@
 from typing import Optional
-from numpy.ma.core import min_val, max_val
 from pydantic import *
 
 class BookRequest(BaseModel):
